@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
 
@@ -28,7 +29,7 @@ class Select(WebElement):
         """
         Performs search for provided item in Web List
         """
-        return self.find_elements_by_tag_name('option')
+        return self.find_elements(By.TAG_NAME, 'option')
 
     def get_attribute_selected(self, attribute):
         """
@@ -61,7 +62,7 @@ class Select(WebElement):
         @params text - string visible text
         """
         xpath = './/option[normalize-space(.) = {0}]'.format(self._escape_string(text))
-        opts = self.find_elements_by_xpath(xpath)
+        opts = self.find_elements(By.XPATH, xpath)
         matched = False
         for opt in opts:
             self._set_selected(opt)
@@ -76,7 +77,7 @@ class Select(WebElement):
                 candidates = self.get_options()
             else:
                 xpath = ".//option[contains(.,{0})]".format(self._escape_string(sub_string_without_space))
-                candidates = self.find_elements_by_xpath(xpath)
+                candidates = self.find_elements(By.XPATH, xpath)
             for candidate in candidates:
                 if text == candidate.text:
                     self._set_selected(candidate)

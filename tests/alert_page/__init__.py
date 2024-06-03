@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from tests import get_url
+from tests.helpers import get_url
 from webium.base_page import BasePage
 from webium.controls.link import Link
 from webium.find import Find

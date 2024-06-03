@@ -48,6 +48,8 @@ class Find(object):
         return self._target_element
 
     def __getattribute__(self, item):
+        if item == '__isabstractmethod__':
+            return False
         if hasattr(Find, item):
             return object.__getattribute__(self, item)
         self._search_element()

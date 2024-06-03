@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from nose.tools import assert_raises, eq_
 
-import tests
+from tests.helpers import get_url
 from webium.base_page import BasePage
 from webium.driver import get_driver
 from webium.errors import WebiumException
@@ -13,7 +13,7 @@ class PageWithoutUrl(BasePage):
 
 
 class TestWithStaticUrl(BasePage):
-    url = tests.get_url('simple_page.html')
+    url = get_url('simple_page.html')
 
 
 class TestNoUrlValidation(TestCase):

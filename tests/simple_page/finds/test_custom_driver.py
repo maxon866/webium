@@ -1,9 +1,13 @@
 from time import time
+
+import pytest
 from nose.tools import eq_, ok_
 from selenium.webdriver import Firefox
+
 from tests.simple_page import SimplePage
 
 
+@pytest.mark.skip('we need only Chrome')
 class TestCustomDriver(object):
     def setUp(self):
         self.driver = Firefox()

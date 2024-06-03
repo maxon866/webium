@@ -8,7 +8,7 @@ class JQuery(object):
       e = driver.find_element_by_id('id_name')
       JQuery(e).val('New name')
     """
-    JQUERY_PATH = './webium/jquery/jquery-1.10.2.js'
+    JQUERY_PATH = './webium/jquery/jquery-3.7.1.js'
 
     def __init__(self, element):
         self.driver = get_driver()

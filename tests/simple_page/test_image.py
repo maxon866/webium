@@ -1,6 +1,6 @@
 from nose.tools import ok_, eq_
 
-from tests import get_url
+from tests.helpers import get_url
 from tests.simple_page import SimplePageTest
 
 

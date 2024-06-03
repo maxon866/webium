@@ -12,7 +12,7 @@ class Image(WebElement):
 
         def is_image_loaded():
             result = self._execute(
-                Command.EXECUTE_SCRIPT,
+                Command.W3C_EXECUTE_SCRIPT,
                 {'script': script, 'args': [self]}
             )
             return result['value']

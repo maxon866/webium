@@ -3,7 +3,7 @@ from unittest import TestCase
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
-import tests
+from tests.helpers import get_url
 from webium.base_page import BasePage
 from webium.controls.checkbox import Checkbox
 from webium.controls.image import Image
@@ -48,7 +48,7 @@ class SimplePage(BasePage):
     '''@type: Select'''
 
     def __init__(self, driver=None):
-        super(SimplePage, self).__init__(driver=driver, url=tests.get_url('simple_page.html'))
+        super(SimplePage, self).__init__(driver=driver, url=get_url('simple_page.html'))
 
     paragraphs = Finds(by=By.TAG_NAME, value='p')
     anchor_list = Finds(Link, By.TAG_NAME, 'a')

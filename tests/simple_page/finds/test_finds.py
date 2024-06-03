@@ -1,6 +1,6 @@
 from nose.tools import eq_, assert_false, ok_
 from selenium.webdriver.common.by import By
-from tests import get_url
+from tests.helpers import get_url
 from tests.simple_page import SimplePageTest
 from webium.find import Finds
 

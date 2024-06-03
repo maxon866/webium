@@ -38,7 +38,7 @@ class WindowsHandler(object):
         return self._driver.window_handles
 
     def switch_to_window(self, window_handle):
-        self._driver.switch_to_window(window_handle)
+        self._driver.switch_to.window(window_handle)
 
     def switch_to_new_window(self):
         self._parent_windows.append(self.active_window)
@@ -81,7 +81,7 @@ class WindowsHandler(object):
         return len(self._driver.window_handles) - len(self._snapshot_of_handles) > 0
 
     def accept_alert(self):
-        self._driver.switch_to_alert().accept()
+        self._driver.switch_to.alert.accept()
 
     def get_alert_text(self):
-        return self._driver.switch_to_alert().text
+        return self._driver.switch_to.alert.text
