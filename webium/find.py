@@ -15,7 +15,7 @@ class Find(object):
     init_args = None
     init_kwargs = None
 
-    def __init__(self, ui_type=WebElement,
+    def __init__(self, ui_type=webium.settings.webelement_class,
                  by=None,
                  value=None,
                  context=None,

@@ -1,9 +1,9 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webelement import WebElement
+import webium.settings
 
 
-class Select(WebElement):
+class Select(webium.settings.webelement_class):
     """
     Implements logic to work with Web List UI elements
     """

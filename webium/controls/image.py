@@ -1,8 +1,8 @@
 from selenium.webdriver.remote.command import Command
-from selenium.webdriver.remote.webelement import WebElement
+import webium.settings
 
 
-class Image(WebElement):
+class Image(webium.settings.webelement_class):
     def get_src(self):
         return self.get_attribute('src')
 

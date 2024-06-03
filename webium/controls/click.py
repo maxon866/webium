@@ -1,9 +1,8 @@
-from selenium.webdriver.remote.webelement import WebElement
-
+import webium.settings
 from webium.jquery import JQuery
 
 
-class Clickable(WebElement):
+class Clickable(webium.settings.webelement_class):
 
     def click(self, jquery=False):
         """
